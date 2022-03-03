@@ -25,7 +25,7 @@ module.exports = {
       resolve: "gatsby-plugin-robots-txt",
       options: {
         host: "https://www.randomhgamer.ga/",
-        sitemap: "https://www.randomhgamer.ga/sitemap.xml",
+        sitemap: "https://www.randomhgamer.ga/sitemap/sitemap-index.xml",
       },
     },
 
