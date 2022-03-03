@@ -23,7 +23,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 import BlogBackGround from "../components/BackGrounds/BlogBackGround";
 
-import { DiscussionEmbed } from "disqus-react";
+import { Link } from "gatsby";
 
 import SEO from "../components/SEO";
 
@@ -103,26 +103,28 @@ export default class BlogTemplate extends Component {
 
               <div class="col-lg-4">
                 <aside class="sidebar sidebar-right sidebar-sticky">
-                  <div class="widget">
-                    <div class="widget-content">
-                      <form
-                        action="#"
-                        class="form form-style-1"
-                        novalidate="novalidate"
-                      >
-                        <div class="input-group">
-                          <input
-                            type="text"
-                            class="form-control"
-                            placeholder="Type something..."
-                          />
-                          <button class="btn btn-color-main-1">
-                            <span class="ion-search"></span>
-                          </button>
-                        </div>
-                      </form>
+                  <Link to={`/SearchPost`}>
+                    <div class="widget">
+                      <div class="widget-content">
+                        <form
+                          action="#"
+                          class="form form-style-1"
+                          novalidate="novalidate"
+                        >
+                          <div class="input-group">
+                            <input
+                              type="text"
+                              class="form-control"
+                              placeholder="Type something..."
+                            />
+                            <button class="btn btn-color-main-1">
+                              <span class="ion-search"></span>
+                            </button>
+                          </div>
+                        </form>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                   <div class="widget widget-highlighted">
                     <h4 class="widget-title">
                       <span>

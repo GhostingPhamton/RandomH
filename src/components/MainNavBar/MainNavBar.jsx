@@ -22,6 +22,12 @@ const MainNavbar = ({}) => {
                   Blogs
                 </Link>
               </div>
+
+              <div className="col-sm">
+                <Link className="virgo-nav-link" to={`/DMCA/`}>
+                  DMCA
+                </Link>
+              </div>
             </div>
           </Nav>
         </Container>

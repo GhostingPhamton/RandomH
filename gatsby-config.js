@@ -7,7 +7,7 @@ module.exports = {
     title: "RamdonHGamer",
     description: "HHHH ",
     author: "RamdonHGamer",
-    siteUrl: `https://RamdonHGamer.ga`,
+    siteUrl: `https://ramdonhgamer.ga`,
     image: "src/images/RamdonH.png",
   },
   plugins: [
@@ -18,6 +18,14 @@ module.exports = {
 
         accessToken: process.env.CONTENTFUL_ACCES_TOKEN,
         enableTags: true,
+      },
+    },
+
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://ramdonhgamer.ga",
+        sitemap: "https://ramdonhgamer.ga/sitemap.xml",
       },
     },
 
