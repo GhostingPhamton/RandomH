@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 
 import SEO from "../components/SEO";
 
-import Search from "../components/search/Search";
+import Search from "../components/Search/Search";
 
 import { appId, indexName, searchKey } from "../utils/algoliadata";
 import TopBackGround from "../components/BackGrounds/TopBackGround";
