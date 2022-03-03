@@ -55,6 +55,7 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
+    `gatsby-plugin-sitemap`,
     "gatsby-plugin-netlify",
     "gatsby-plugin-image",
     `gatsby-transformer-sharp`,
