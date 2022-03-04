@@ -6,9 +6,15 @@ import SEO from "../components/SEO";
 
 import Search from "../components/Search/Search";
 
-import { appId, indexName, searchKey } from "../utils/algoliadata";
 import TopBackGround from "../components/BackGrounds/TopBackGround";
 import Container from "react-bootstrap/Container";
+
+import algoliasearch from "algoliasearch/lite";
+
+const searchClient = algoliasearch(
+  process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
+  process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY
+);
 
 const SearchPost = ({ data }) => {
   return (
@@ -42,7 +48,10 @@ const SearchPost = ({ data }) => {
       </Container>
       <div class="gap-1"></div>
 
-      <Search indexName={process.env.ALGOLIA_INDEX_NAME} />
+      <Search
+        indexName={process.env.ALGOLIA_INDEX_NAME}
+        searchClient={searchClient}
+      />
     </Layout>
   );
 };
