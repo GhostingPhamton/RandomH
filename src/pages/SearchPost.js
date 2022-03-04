@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 
@@ -12,10 +12,6 @@ import Container from "react-bootstrap/Container";
 import algoliasearch from "algoliasearch/lite";
 
 const SearchPost = ({ data }) => {
-  const searchClient = algoliasearch(
-    process.env.GATSBY_ALGOLIA_APP_ID,
-    process.env.GATSBY_ALGOLIA_SEARCH_KEY
-  );
   return (
     <Layout className="virgomain" data={data}>
       <SEO

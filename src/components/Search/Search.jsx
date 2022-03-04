@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { navigate } from "gatsby";
 
 import algoliasearch from "algoliasearch/lite";
@@ -28,9 +28,12 @@ import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
 
 import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook";
 
-const searchClient = algoliasearch(
-  process.env.GATSBY_ALGOLIA_APP_ID,
-  process.env.GATSBY_ALGOLIA_SEARCH_KEY
+const searchClient = useMemo(
+  algoliasearch(
+    process.env.GATSBY_ALGOLIA_APP_ID,
+    process.env.GATSBY_ALGOLIA_SEARCH_KEY
+  ),
+  []
 );
 
 const PostHits = connectHits(({ hits }) => (
