@@ -43,7 +43,13 @@ const SearchPost = ({ data }) => {
       </Container>
       <div class="gap-1"></div>
 
-      <Search indexName={process.env.ALGOLIA_INDEX_NAME} />
+      <Search
+        indexName={process.env.ALGOLIA_INDEX_NAME}
+        searchClient={algoliasearch(
+          process.env.GATSBY_ALGOLIA_APP_ID,
+          process.env.GATSBY_ALGOLIA_SEARCH_KEY
+        )}
+      />
     </Layout>
   );
 };
