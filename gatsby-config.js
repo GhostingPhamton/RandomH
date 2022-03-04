@@ -7,7 +7,7 @@ module.exports = {
     title: "RamdonHGamer",
     description: "HHHH ",
     author: "RamdonHGamer",
-    siteUrl: `https://ramdonhgamer.ga`,
+    siteUrl: `https://www.randomhgamer.ga/`,
     image: "src/images/RamdonH.png",
   },
   plugins: [
@@ -55,7 +55,8 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
-    `gatsby-plugin-sitemap`,
+
+    "gatsby-plugin-sitemap",
     "gatsby-plugin-netlify",
     "gatsby-plugin-image",
     `gatsby-transformer-sharp`,
