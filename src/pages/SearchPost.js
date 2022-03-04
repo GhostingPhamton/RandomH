@@ -11,6 +11,14 @@ import Container from "react-bootstrap/Container";
 
 import algoliasearch from "algoliasearch/lite";
 
+const searchClient = useMemo(
+  algoliasearch(
+    process.env.GATSBY_ALGOLIA_APP_ID,
+    process.env.GATSBY_ALGOLIA_SEARCH_KEY
+  ),
+  []
+);
+
 const SearchPost = ({ data }) => {
   return (
     <Layout className="virgomain" data={data}>
@@ -43,7 +51,10 @@ const SearchPost = ({ data }) => {
       </Container>
       <div class="gap-1"></div>
 
-      <Search indexName={process.env.ALGOLIA_INDEX_NAME} />
+      <Search
+        indexName={process.env.ALGOLIA_INDEX_NAME}
+        searchClient={searchClient}
+      />
     </Layout>
   );
 };
