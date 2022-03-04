@@ -27,7 +27,7 @@ const queries = [
     query: postQuery,
     transformer: ({ data }) =>
       data.allContentfulBlogs.edges.map(({ node }) => node), // optional
-    indexName: "my_awesome_content", // overrides main index name, optional
+    indexName: "RandomHSearch", // overrides main index name, optional
     settings: {
       // optional, any index settings
     },
