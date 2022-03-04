@@ -29,7 +29,7 @@ import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
 import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook";
 
 const searchClient = algoliasearch(
-  process.env.ALGOLIA_APP_ID,
+  "process.env.ALGOLIA_APP_ID",
   process.env.ALGOLIA_SEARCH_KEY
 );
 
