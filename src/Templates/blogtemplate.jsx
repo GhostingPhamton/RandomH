@@ -103,7 +103,7 @@ export default class BlogTemplate extends Component {
 
               <div class="col-lg-4">
                 <aside class="sidebar sidebar-right sidebar-sticky">
-                  <Link to={`/SearchPost`}>
+                  <Link to={`/SearchPost/`}>
                     <div class="widget">
                       <div class="widget-content">
                         <form

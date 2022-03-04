@@ -86,7 +86,7 @@ export default class PostSection extends Component {
                       class="form form-style-1"
                       novalidate="novalidate"
                     >
-                      <Link to={`/SearchPost`}>
+                      <Link to={`/SearchPost/`}>
                         <div class="input-group">
                           <input
                             type="text"

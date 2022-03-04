@@ -42,7 +42,7 @@ const SearchPost = ({ data }) => {
       </Container>
       <div class="gap-1"></div>
 
-      <Search indexName={indexName} />
+      <Search indexName={process.env.ALGOLIA_INDEX_NAME} />
     </Layout>
   );
 };
