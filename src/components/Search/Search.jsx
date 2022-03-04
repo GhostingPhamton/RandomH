@@ -28,14 +28,6 @@ import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
 
 import { FaFacebook } from "@react-icons/all-files/fa/FaFacebook";
 
-const searchClient = useMemo(
-  algoliasearch(
-    process.env.GATSBY_ALGOLIA_APP_ID,
-    process.env.GATSBY_ALGOLIA_SEARCH_KEY
-  ),
-  []
-);
-
 const PostHits = connectHits(({ hits }) => (
   <>
     <Container>
@@ -140,7 +132,10 @@ export default function Search() {
     <div className="search__page__container">
       <InstantSearch
         indexName={process.env.ALGOLIA_INDEX_NAME}
-        searchClient={searchClient}
+        searchClient={algoliasearch(
+          process.env.GATSBY_ALGOLIA_APP_ID,
+          process.env.GATSBY_ALGOLIA_SEARCH_KEY
+        )}
       >
         <PostHits />
         <Pagination />
