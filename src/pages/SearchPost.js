@@ -11,12 +11,11 @@ import Container from "react-bootstrap/Container";
 
 import algoliasearch from "algoliasearch/lite";
 
-const searchClient = algoliasearch(
-  process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
-  process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY
-);
-
 const SearchPost = ({ data }) => {
+  const searchClient = algoliasearch(
+    process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
+    process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY
+  );
   return (
     <Layout className="virgomain" data={data}>
       <SEO
