@@ -56,7 +56,50 @@ module.exports = {
       },
     },
 
-    "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-complex-sitemap-tree",
+      options: {
+        query: `
+    {
+        allContentfulBlogs{
+          edges {
+            node {
+              title
+              slug
+              imagen {
+                gatsbyImageData(width: 360)
+                file {
+                  url
+                }
+              }
+              descripcion {
+                descripcion
+              }
+            }
+          }
+        }
+    
+
+        
+      }
+
+      `,
+        sitemapTree: {
+          fileName: "sitemap.xml",
+          children: [
+            {
+              fileName: "allContentfulBlogs.xml",
+              queryName: "allContentfulBlogs",
+              serializer: (edge) => ({
+                loc: edge.slug,
+                title: edge.title,
+              }),
+            },
+          ],
+        },
+      },
+    },
+
     "gatsby-plugin-netlify",
     "gatsby-plugin-image",
     `gatsby-transformer-sharp`,
