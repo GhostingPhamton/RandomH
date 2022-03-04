@@ -131,7 +131,7 @@ export default function Search() {
   return (
     <div className="search__page__container">
       <InstantSearch
-        indexName={process.env.ALGOLIA_INDEX_NAME}
+        indexName={process.env.GATSBY_ALGOLIA_INDEX_NAME}
         searchClient={algoliasearch(
           process.env.GATSBY_ALGOLIA_APP_ID,
           process.env.GATSBY_ALGOLIA_SEARCH_KEY
