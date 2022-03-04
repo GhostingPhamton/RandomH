@@ -13,8 +13,8 @@ import algoliasearch from "algoliasearch/lite";
 
 const SearchPost = ({ data }) => {
   const searchClient = algoliasearch(
-    "process.env.ALGOLIA_APP_ID",
-    process.env.ALGOLIA_SEARCH_KEY
+    process.env.GATSBY_ALGOLIA_APP_ID,
+    process.env.GATSBY_ALGOLIA_SEARCH_KEY
   );
   return (
     <Layout className="virgomain" data={data}>
